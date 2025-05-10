@@ -147,7 +147,7 @@ public class ItemService {
                     return itemsProcessed;
                 })
                 .exceptionally(e -> {
-                    // daca au aparut erori se propaga si se returneaza o lista de iteme goala
+                    // daca au aparut erori returneaza o lista de iteme goala
                     LOGGER.error("Error while processing final item list", e);
                     return new ArrayList<>();
                 });
